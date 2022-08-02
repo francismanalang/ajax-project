@@ -7,16 +7,7 @@ var $countryName = document.querySelector('.country-name');
 var $nextButton = document.querySelector('.next-button');
 
 function globeButtonEvent(event) {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://restcountries.com/v3.1/all');
-  xhr.responseType = 'json';
-  xhr.addEventListener('load', function () {
-    var countries = xhr.response;
-    var randomIndex = Math.floor(Math.random() * countries.length);
-    $countryFlag.setAttribute('src', countries[randomIndex].flags.png);
-    $countryName.innerHTML = countries[randomIndex].name.common;
-  });
-  xhr.send();
+  nextButtonEvent();
   viewSwap('country-generator');
   data.view = 'globe';
 }
@@ -55,11 +46,9 @@ function viewSwap(event) {
 
 function atlasContentLoaded(event) {
   if (data.view === 'globe') {
-    $globeContainer.className = 'container globe-container';
-    $countryGenerator.className = 'container generator-container hidden';
+    viewSwap('globe');
   } else if (data.view === 'country-generator') {
-    $globeContainer.className = 'container globe-container hidden';
-    $countryGenerator.className = 'container generator-container';
+    viewSwap('country-generator');
   }
 }
 

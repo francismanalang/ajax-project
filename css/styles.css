@@ -1,10 +1,10 @@
 .navbar {
-  background-color: #85b0af;
+  background-color: #4fc3d0;
   height: 75px;
 }
 
 .background-color {
-  background-color: #85b0af;
+  background-color: #4fc3d0;
 }
 
 .display-flex {
@@ -12,11 +12,12 @@
 }
 
 .header-button {
-  background-color: #85b0af;
+  background-color: #4fc3d0;
   border: none;
-  font-family: "Dancing Script", cursive;
+  font-family: "Chelsea Market", cursive;
   font-size: 45px;
-  color: #015c75;
+  color: white;
+  padding-top: 8px;
 }
 
 .header-button:hover {
@@ -26,7 +27,7 @@
 .globe-header {
   text-align: center;
   font-size: 25px;
-  color: #015c75;
+  color: #4fc3d0;
 }
 
 .globe-button {
@@ -67,7 +68,7 @@
 .country-name {
   font-family: Roboto, sans-serif;
   text-align: center;
-  color: #015c75;
+  color: white;
   padding-top: 35px;
 }
 
@@ -77,7 +78,7 @@
 
 .line {
   width: 100%;
-  border-bottom: 2px solid #015c75;
+  border-bottom: 2px solid white;
 }
 
 .next-button {
@@ -86,8 +87,8 @@
   height: 85px;
   border: none;
   border-radius: 0.4em;
-  background-color: #85b0af;
-  color: #015c75;
+  background-color: #4fc3d0;
+  color: white;
   font-size: 50px;
 }
 
