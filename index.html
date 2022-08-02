@@ -8,10 +8,59 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
-  <header>
+  <header class="navbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-full">
+          <div class="header-div">
+            <button class="header-button">Atlas</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
+  <div class="view" data-view="globe">
+    <div class="container globe-container hidden">
+      <div class="row">
+        <div class="col-full">
+          <div class="globe-wrapper">
+            <h1 class="globe-header">Click the globe to get started:</h1>
+            <button class="globe-button">
+              <img class="globe-image" src="images/earth-with-transparent-background-10 (1).png" alt="Globe">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="view" data-view="country-generator">
+    <div class="container generator-container">
+      <div class="row">
+        <div class="col-full padding-top">
+          <div class="country-display background-color">
+            <div class="flag-wrapper">
+              <img class="country-flag" src="https://data.whicdn.com/images/264931727/original.gif" alt="Country Flag">
+              <div class="line"></div>
+              <h1 class="country-name">Loading...</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-half">
+        </div>
+        <div class="col-half">
+          <div class="next-button-wrapper">
+            <button class="next-button">NEXT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <main>
   </main>
   <script src="js/data.js"></script>
