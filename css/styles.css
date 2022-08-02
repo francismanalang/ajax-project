@@ -1,0 +1,102 @@
+.navbar {
+  background-color: #4fc3d0;
+  height: 75px;
+}
+
+.background-color {
+  background-color: #4fc3d0;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.header-button {
+  background-color: #4fc3d0;
+  border: none;
+  font-family: "Chelsea Market", cursive;
+  font-size: 45px;
+  color: white;
+  padding-top: 8px;
+}
+
+.header-button:hover {
+  cursor: pointer;
+}
+
+.globe-header {
+  text-align: center;
+  font-size: 25px;
+  color: #4fc3d0;
+}
+
+.globe-button {
+  border: none;
+  background-color: white;
+  transition: transform 0.5s;
+}
+
+.globe-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.globe-image {
+  width: 45%;
+  padding-left: 20px;
+}
+
+.globe-wrapper {
+  padding-top: 140px;
+}
+
+.country-flag {
+  width: 100%;
+  height: 350px;
+  padding-bottom: 40px;
+  padding-top: 15px;
+}
+
+.country-display {
+  padding: 40px;
+  border: #015c75 4.5px solid;
+  border-radius: 2.5%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.country-name {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  color: white;
+  padding-top: 35px;
+}
+
+.padding-top {
+  padding-top: 20px;
+}
+
+.line {
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+
+.next-button {
+  font-family: Roboto, sans-serif;
+  width: 100%;
+  height: 85px;
+  border: none;
+  border-radius: 0.4em;
+  background-color: #4fc3d0;
+  color: white;
+  font-size: 50px;
+}
+
+.next-button:hover {
+  cursor: pointer;
+}
+
+.next-button-wrapper {
+  margin-right: 15px;
+  padding: 14px 0;
+}
