@@ -3,18 +3,19 @@
 var data = {
   view: 'globe',
   saved: [],
+  allCountries: [],
   nextEntryId: 1
 };
 
-var previousDataJSON = localStorage.getItem('atlas-local-storage');
+var previousDataJSON = localStorage.getItem('flags-local-storage');
 
 if (previousDataJSON !== null) {
   data = JSON.parse(previousDataJSON);
 }
 
-function atlasStorage(event) {
+function flagsStorage(event) {
   var dataJSON = JSON.stringify(data);
-  localStorage.setItem('atlas-local-storage', dataJSON);
+  localStorage.setItem('flags-local-storage', dataJSON);
 }
 
-window.addEventListener('beforeunload', atlasStorage);
+window.addEventListener('beforeunload', flagsStorage);

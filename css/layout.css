@@ -3,7 +3,7 @@
 }
 
 .container {
-  max-width: 725px;
+  max-width: 625px;
   margin: auto;
 }
 
@@ -12,10 +12,25 @@
   flex-wrap: wrap;
 }
 
+.row-wrap {
+  flex-wrap: wrap;
+}
+
 .col-full {
   width: 100%;
 }
 
-.col-half {
+.col-half,
+.column-full {
   width: 50%;
+}
+
+.column-full {
+  padding: 3px 0;
+}
+
+@media screen and (max-width: 620px) {
+  .column-full {
+    width: 100%;
+  }
 }
