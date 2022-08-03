@@ -5,3 +5,9 @@
 body {
   margin: 0;
 }
+
+p {
+  color: #4fc3d0;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+}

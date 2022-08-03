@@ -1,6 +1,6 @@
 var $globeButton = document.querySelector('.globe-button');
 var $globeContainer = document.querySelector('.globe-container');
-var $atlasButton = document.querySelector('.header-button');
+var $flashFlagButton = document.querySelector('.header-button');
 var $countryGenerator = document.querySelector('.generator-container');
 var $countryFlag = document.querySelector('.country-flag');
 var $countryName = document.querySelector('.country-name');
@@ -8,6 +8,9 @@ var $nextButton = document.querySelector('.next-button');
 var $saveButton = document.querySelector('.save-button');
 var $listContainer = document.querySelector('.list-container');
 var $listDiv = document.querySelector('.list');
+var $listButton = document.querySelector('.list-button');
+var $emptyListText = document.querySelector('.empty-list-text');
+var $studyButton = document.querySelector('.study-button');
 
 function globeButtonEvent(event) {
   nextButtonEvent();
@@ -16,12 +19,27 @@ function globeButtonEvent(event) {
 }
 $globeButton.addEventListener('click', globeButtonEvent);
 
-function atlasButtonEvent(event) {
+function flashFlagButtonEvent(event) {
   viewSwap('globe');
   data.view = 'globe';
 }
 
-$atlasButton.addEventListener('click', atlasButtonEvent);
+$flashFlagButton.addEventListener('click', flashFlagButtonEvent);
+
+function listButtonEvent(event) {
+  viewSwap('countries-list');
+  data.view = 'countries-list';
+
+  if (data.saved.length === 0) {
+    $emptyListText.className = 'empty-list-text';
+    $studyButton.className = 'study-button hidden';
+  } else if (data.saved.length !== 0) {
+    $emptyListText.className = 'empty-list-text hidden';
+    $studyButton.className = 'study-button';
+  }
+}
+
+$listButton.addEventListener('click', listButtonEvent);
 
 function nextButtonEvent(event) {
   var xhr = new XMLHttpRequest();
@@ -87,6 +105,9 @@ function saveButtonEvent(event) {
   }
 
   $listDiv.prepend(domFlagsList(data.allCountries[0]));
+
+  $emptyListText.className = 'empty-list-text hidden';
+  $studyButton.className = 'study-button';
 
   viewSwap('countries-list');
   data.view = 'countries-list';
