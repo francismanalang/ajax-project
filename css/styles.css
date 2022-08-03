@@ -83,8 +83,38 @@
   padding-top: 15px;
 }
 
+.study-flag {
+  width: 100%;
+  height: 280px;
+  padding-bottom: 40px;
+  padding-top: 15px;
+}
+
+.answer-flag {
+  width: 100%;
+  height: 280px;
+  padding-bottom: 40px;
+  padding-top: 15px;
+}
+
+.study-display {
+  padding: 90px 50px;
+  border: #015c75 4.5px solid;
+  border-radius: 2.5%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.answer-display {
+  padding: 35px;
+  border: #015c75 4.5px solid;
+  border-radius: 2.5%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 .country-display {
-  padding: 40px;
+  padding: 35px;
   border: #015c75 4.5px solid;
   border-radius: 2.5%;
   margin-left: 15px;
@@ -114,6 +144,13 @@
   padding-top: 35px;
 }
 
+.answer-name {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  color: white;
+  padding-top: 35px;
+}
+
 .padding-top {
   padding-top: 20px;
 }
@@ -134,7 +171,49 @@
   font-size: 50px;
 }
 
+.back-button {
+  font-family: Roboto, sans-serif;
+  width: 100%;
+  height: 85px;
+  border: none;
+  border-radius: 0.4em;
+  background-color: #015c75;
+  color: white;
+  font-size: 50px;
+}
+
+.back-button:hover {
+  cursor: pointer;
+}
+
+.answer-button {
+  font-family: Roboto, sans-serif;
+  width: 100%;
+  height: 80px;
+  border: none;
+  border-radius: 0.4em;
+  background-color: #015c75;
+  color: white;
+  font-size: 40px;
+}
+
+.answer-button:hover {
+  cursor: pointer;
+}
+
+.answer-button-wrapper {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 14px 0;
+}
+
 .save-button-wrapper {
+  margin-left: 15px;
+  padding: 14px 0;
+  padding-right: 5px;
+}
+
+.back-button-wrapper {
   margin-left: 15px;
   padding: 14px 0;
   padding-right: 5px;
@@ -153,6 +232,21 @@
   background-color: #4fc3d0;
   color: white;
   font-size: 50px;
+}
+
+.study-next-button {
+  font-family: Roboto, sans-serif;
+  width: 100%;
+  height: 85px;
+  border: none;
+  border-radius: 0.4em;
+  background-color: #4fc3d0;
+  color: white;
+  font-size: 50px;
+}
+
+.study-next-button:hover {
+  cursor: pointer;
 }
 
 .next-button:hover {
@@ -190,7 +284,7 @@
 .list-text {
   color: #4fc3d0;
   font-family: Roboto, sans-serif;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 .empty-list-text {

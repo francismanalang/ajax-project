@@ -11,6 +11,15 @@ var $listDiv = document.querySelector('.list');
 var $listButton = document.querySelector('.list-button');
 var $emptyListText = document.querySelector('.empty-list-text');
 var $studyButton = document.querySelector('.study-button');
+var $studyContainer = document.querySelector('.study-container');
+var $answerButton = document.querySelector('.answer-button');
+var $answerContainer = document.querySelector('.answer-container');
+var $backButton = document.querySelector('.back-button');
+var $studyFlag = document.querySelector('.study-flag');
+var $answerFlag = document.querySelector('.answer-flag');
+var $answerName = document.querySelector('.answer-name');
+var $studyNextButton = document.querySelector('.study-next-button');
+var index = 0;
 
 function globeButtonEvent(event) {
   nextButtonEvent();
@@ -52,9 +61,11 @@ function nextButtonEvent(event) {
       countryFlag: countries[randomIndex].flags.png,
       countryName: countries[randomIndex].name.common
     };
-    $countryFlag.setAttribute('src', countryValues.countryFlag);
-    $countryName.textContent = countryValues.countryName;
-    data.allCountries.unshift(countryValues);
+    if (countryValues.countryFlag !== undefined && countryValues.countryName !== null) {
+      $countryFlag.setAttribute('src', countryValues.countryFlag);
+      $countryName.textContent = countryValues.countryName;
+      data.allCountries.unshift(countryValues);
+    }
     if (data.allCountries.length > 5) {
       data.allCountries = [];
     }
@@ -65,24 +76,42 @@ $nextButton.addEventListener('click', nextButtonEvent);
 
 function viewSwap(event) {
   if (event === 'globe') {
-    $globeContainer.className = 'container globe-container';
     $countryGenerator.className = 'container generator-container hidden';
     $listContainer.className = 'container list-container hidden';
+    $studyContainer.className = 'container study-container hidden';
+    $answerContainer.className = 'container answer-container hidden';
+    $globeContainer.className = 'container globe-container';
   } else if (event === 'country-generator') {
     $globeContainer.className = 'container globe-container hidden';
     $listContainer.className = 'container list-container hidden';
-    $countryGenerator.className = 'container generator-container';
     $listContainer.className = 'container list-container hidden';
+    $studyContainer.className = 'container study-container hidden';
+    $answerContainer.className = 'container answer-container hidden';
+    $countryGenerator.className = 'container generator-container';
   } else if (event === 'countries-list') {
     $globeContainer.className = 'container globe-container hidden';
     $countryGenerator.className = 'container generator-container hidden';
+    $studyContainer.className = 'container study-container hidden';
+    $answerContainer.className = 'container answer-container hidden';
     $listContainer.className = 'container list-container';
+  } else if (event === 'study-view') {
+    $globeContainer.className = 'container globe-container hidden';
+    $countryGenerator.className = 'container generator-container hidden';
+    $listContainer.className = 'container list-container hidden';
+    $answerContainer.className = 'container answer-container hidden';
+    $studyContainer.className = 'container study-container';
+  } else if (event === 'answer-view') {
+    $globeContainer.className = 'container globe-container hidden';
+    $countryGenerator.className = 'container generator-container hidden';
+    $listContainer.className = 'container list-container hidden';
+    $studyContainer.className = 'container study-container hidden';
+    $answerContainer.className = 'container answer-container';
   }
 }
 
 function flagsContentLoaded(event) {
   for (var i = 0; i < data.saved.length; i++) {
-    if (data.saved[i] !== null) {
+    if (data.saved[i] !== null && data.saved[i] !== undefined) {
       var listAppend = domFlagsList(data.saved[i]);
       $listDiv.appendChild(listAppend);
     }
@@ -94,13 +123,17 @@ function flagsContentLoaded(event) {
     viewSwap('country-generator');
   } else if (data.view === 'countries-list') {
     viewSwap('countries-list');
+  } else if (data.view === 'study-view') {
+    viewSwap('study-view');
+  } else if (data.view === 'answer-view') {
+    viewSwap('answer-view');
   }
 }
 
 window.addEventListener('DOMContentLoaded', flagsContentLoaded);
 
 function saveButtonEvent(event) {
-  if (data.allCountries[0] !== null) {
+  if (data.allCountries[0] !== null && data.allCountries[0] !== undefined) {
     data.saved.unshift(data.allCountries[0]);
   }
 
@@ -114,6 +147,46 @@ function saveButtonEvent(event) {
 }
 
 $saveButton.addEventListener('click', saveButtonEvent);
+
+function studyButtonEvent(event) {
+  index = 0;
+  $studyFlag.setAttribute('src', data.saved[0].countryFlag);
+
+  viewSwap('study-view');
+  data.view = 'countries-list';
+}
+
+$studyButton.addEventListener('click', studyButtonEvent);
+
+function studyNextButton(event) {
+  if (index < data.saved.length - 1) {
+    index++;
+    viewSwap('study-view');
+    data.view = 'countries-list';
+    $studyFlag.setAttribute('src', data.saved[index].countryFlag);
+  } else {
+    viewSwap('countries-list');
+    data.view = 'countries-list';
+  }
+}
+
+$studyNextButton.addEventListener('click', studyNextButton);
+
+function answerButtonEvent(event) {
+  $answerFlag.setAttribute('src', data.saved[index].countryFlag);
+  $answerName.textContent = data.saved[index].countryName;
+  viewSwap('answer-view');
+  data.view = 'countries-list';
+}
+
+$answerButton.addEventListener('click', answerButtonEvent);
+
+function backButtonEvent(event) {
+  viewSwap('study-view');
+  data.view = 'countries-list';
+}
+
+$backButton.addEventListener('click', backButtonEvent);
 
 function domFlagsList(entry) {
   var colFullDiv = document.createElement('div');
