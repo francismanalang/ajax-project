@@ -4,6 +4,7 @@ var data = {
   view: 'globe',
   saved: [],
   allCountries: [],
+  delete: null,
   nextEntryId: 1
 };
 

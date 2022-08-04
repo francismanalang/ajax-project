@@ -15,6 +15,9 @@ var $answerFlag = document.querySelector('.answer-flag');
 var $answerName = document.querySelector('.answer-name');
 var $studyNextButton = document.querySelector('.study-next-button');
 var $view = document.querySelectorAll('.view');
+var $modalView = document.querySelector('.modal-view');
+var $cancelButton = document.querySelector('.cancel-button');
+var $deleteButton = document.querySelector('.delete-button');
 var index = 0;
 
 function globeButtonEvent(event) {
@@ -57,13 +60,12 @@ function nextButtonEvent(event) {
       countryFlag: countries[randomIndex].flags.png,
       countryName: countries[randomIndex].name.common
     };
-    if (countryValues.countryFlag !== undefined && countryValues.countryName !== null) {
-      $countryFlag.setAttribute('src', countryValues.countryFlag);
-      $countryName.textContent = countryValues.countryName;
-      data.allCountries.unshift(countryValues);
-    }
+    $countryFlag.setAttribute('src', countryValues.countryFlag);
+    $countryName.textContent = countryValues.countryName;
+    data.allCountries.unshift(countryValues);
+
     if (data.allCountries.length > 5) {
-      data.allCountries = [];
+      data.allCountries.splice(4);
     }
   });
   xhr.send();
@@ -82,10 +84,8 @@ function viewSwap(event) {
 
 function flagsContentLoaded(event) {
   for (var i = 0; i < data.saved.length; i++) {
-    if (data.saved[i] !== null && data.saved[i] !== undefined) {
-      var listAppend = domFlagsList(data.saved[i]);
-      $listDiv.appendChild(listAppend);
-    }
+    var listAppend = domFlagsList(data.saved[i]);
+    $listDiv.appendChild(listAppend);
   }
 
   if (data.saved.length === 0) {
@@ -112,9 +112,9 @@ function flagsContentLoaded(event) {
 window.addEventListener('DOMContentLoaded', flagsContentLoaded);
 
 function saveButtonEvent(event) {
-  if (data.allCountries[0] !== null && data.allCountries[0] !== undefined) {
-    data.saved.unshift(data.allCountries[0]);
-  }
+  data.saved.unshift(data.allCountries[0]);
+  data.saved[0].entryId = data.nextEntryId;
+  data.nextEntryId++;
 
   $listDiv.prepend(domFlagsList(data.allCountries[0]));
 
@@ -185,5 +185,60 @@ function domFlagsList(entry) {
   flagImageElement.setAttribute('src', entry.countryFlag);
   flagWrapperDiv.appendChild(flagImageElement);
 
+  var deleteIcon = document.createElement('i');
+  deleteIcon.className = 'fa-solid fa-trash-can fa-lg';
+  deleteIcon.setAttribute('data-entry-id', entry.entryId);
+  flagDisplayDiv.appendChild(deleteIcon);
+
   return colFullDiv;
 }
+
+function iconEvent(event) {
+  if (event.target.tagName === 'I') {
+    var iEntryId = Number(event.target.getAttribute('data-entry-id'));
+    for (var i = 0; i < data.saved.length; i++) {
+      if (iEntryId === data.saved[i].entryId) {
+        data.delete = data.saved[i];
+      }
+    }
+    $modalView.className = 'modal-view';
+  }
+}
+
+$listDiv.addEventListener('click', iconEvent);
+
+function cancelButtonEvent(event) {
+  $modalView.className = 'modal-view hidden';
+  data.delete = null;
+}
+
+$cancelButton.addEventListener('click', cancelButtonEvent);
+
+function deleteButtonEvent(event) {
+  var listDiv = document.querySelectorAll('.column-full');
+
+  if (data.delete !== null) {
+    for (var i = 0; i < data.saved.length; i++) {
+      if (data.delete.entryId === data.saved[i].entryId) {
+        data.saved.splice(i, 1);
+        listDiv[i].remove();
+        cancelButtonEvent();
+        viewSwap('countries-list');
+        data.view = 'countries-list';
+        data.delete = null;
+      }
+    }
+  }
+
+  if (data.saved.length === 0) {
+    $emptyListText.className = 'empty-list-text';
+    $studyButton.className = 'study-button hidden';
+  } else if (data.saved.length !== 0) {
+    $emptyListText.className = 'empty-list-text hidden';
+    $studyButton.className = 'study-button';
+  }
+  viewSwap('countries-list');
+  data.view = 'countries-list';
+}
+
+$deleteButton.addEventListener('click', deleteButtonEvent);
