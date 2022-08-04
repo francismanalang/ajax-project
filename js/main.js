@@ -1,24 +1,20 @@
 var $globeButton = document.querySelector('.globe-button');
-var $globeContainer = document.querySelector('.globe-container');
 var $flashFlagButton = document.querySelector('.header-button');
-var $countryGenerator = document.querySelector('.generator-container');
 var $countryFlag = document.querySelector('.country-flag');
 var $countryName = document.querySelector('.country-name');
 var $nextButton = document.querySelector('.next-button');
 var $saveButton = document.querySelector('.save-button');
-var $listContainer = document.querySelector('.list-container');
 var $listDiv = document.querySelector('.list');
 var $listButton = document.querySelector('.list-button');
 var $emptyListText = document.querySelector('.empty-list-text');
 var $studyButton = document.querySelector('.study-button');
-var $studyContainer = document.querySelector('.study-container');
 var $answerButton = document.querySelector('.answer-button');
-var $answerContainer = document.querySelector('.answer-container');
 var $backButton = document.querySelector('.back-button');
 var $studyFlag = document.querySelector('.study-flag');
 var $answerFlag = document.querySelector('.answer-flag');
 var $answerName = document.querySelector('.answer-name');
 var $studyNextButton = document.querySelector('.study-next-button');
+var $view = document.querySelectorAll('.view');
 var index = 0;
 
 function globeButtonEvent(event) {
@@ -75,37 +71,12 @@ function nextButtonEvent(event) {
 $nextButton.addEventListener('click', nextButtonEvent);
 
 function viewSwap(event) {
-  if (event === 'globe') {
-    $countryGenerator.className = 'container generator-container hidden';
-    $listContainer.className = 'container list-container hidden';
-    $studyContainer.className = 'container study-container hidden';
-    $answerContainer.className = 'container answer-container hidden';
-    $globeContainer.className = 'container globe-container';
-  } else if (event === 'country-generator') {
-    $globeContainer.className = 'container globe-container hidden';
-    $listContainer.className = 'container list-container hidden';
-    $listContainer.className = 'container list-container hidden';
-    $studyContainer.className = 'container study-container hidden';
-    $answerContainer.className = 'container answer-container hidden';
-    $countryGenerator.className = 'container generator-container';
-  } else if (event === 'countries-list') {
-    $globeContainer.className = 'container globe-container hidden';
-    $countryGenerator.className = 'container generator-container hidden';
-    $studyContainer.className = 'container study-container hidden';
-    $answerContainer.className = 'container answer-container hidden';
-    $listContainer.className = 'container list-container';
-  } else if (event === 'study-view') {
-    $globeContainer.className = 'container globe-container hidden';
-    $countryGenerator.className = 'container generator-container hidden';
-    $listContainer.className = 'container list-container hidden';
-    $answerContainer.className = 'container answer-container hidden';
-    $studyContainer.className = 'container study-container';
-  } else if (event === 'answer-view') {
-    $globeContainer.className = 'container globe-container hidden';
-    $countryGenerator.className = 'container generator-container hidden';
-    $listContainer.className = 'container list-container hidden';
-    $studyContainer.className = 'container study-container hidden';
-    $answerContainer.className = 'container answer-container';
+  for (var i = 0; i < $view.length; i++) {
+    if (event === $view[i].getAttribute('data-view')) {
+      $view[i].className = 'view';
+    } else {
+      $view[i].className = 'view hidden';
+    }
   }
 }
 
@@ -115,6 +86,14 @@ function flagsContentLoaded(event) {
       var listAppend = domFlagsList(data.saved[i]);
       $listDiv.appendChild(listAppend);
     }
+  }
+
+  if (data.saved.length === 0) {
+    $emptyListText.className = 'empty-list-text';
+    $studyButton.className = 'study-button hidden';
+  } else if (data.saved.length !== 0) {
+    $emptyListText.className = 'empty-list-text hidden';
+    $studyButton.className = 'study-button';
   }
 
   if (data.view === 'globe') {
