@@ -25,7 +25,7 @@
     </div>
   </header>
   <div class="view" data-view="globe">
-    <div class="container globe-container hidden">
+    <div class="container globe-container">
       <div class="row">
         <div class="col-full">
           <div class="globe-wrapper">
@@ -66,7 +66,7 @@
     </div>
   </div>
   <div class="view" data-view="countries-list">
-    <div class="container list-container hidden">
+    <div class="container list-container">
       <div class="row">
         <div class="col-full text-align-center">
           <h1 class="list-text">Countries List</h1>
@@ -74,13 +74,60 @@
       </div>
       <div class="row">
         <div class="col-full text-align-center">
-          <p class="empty-list-text hidden">Oh no! You have no countries to study</p>
+          <p class="empty-list-text">Oh no! You have no countries to study</p>
         </div>
       </div>
       <div class="row list">
       </div>
       <div class="study-button-wrapper">
-        <button class="study-button">Study</button>
+        <button class="study-button">STUDY</button>
+      </div>
+    </div>
+  </div>
+  <div class="view" data-view="study-view">
+    <div class="container study-container">
+      <div class="row">
+        <div class="col-full padding-top">
+          <div class="study-display background-color">
+            <div class="study-wrapper">
+              <img class="study-flag" src="" alt="Study Flag">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-full">
+          <div class="answer-button-wrapper">
+            <button class="answer-button">ANSWER</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="view" data-view="answer-view">
+    <div class="container answer-container">
+      <div class="row">
+        <div class="col-full padding-top">
+          <div class="answer-display background-color">
+            <div class="answer-wrapper">
+              <img class="answer-flag" src="" alt="answer-flag">
+              <div class="line"></div>
+              <h1 class="answer-name">Loading...</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-half">
+          <div class="back-button-wrapper">
+            <button class="back-button">BACK</button>
+          </div>
+        </div>
+        <div class="col-half">
+          <div class="next-button-wrapper">
+            <button class="study-next-button">NEXT</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
