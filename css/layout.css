@@ -29,8 +29,18 @@
   padding: 3px 0;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 768px) {
   .column-full {
     width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  i {
+    padding-right: 0.5rem;
+  }
+
+  .list-flag {
+    padding-left: 0.5rem;
   }
 }

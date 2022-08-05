@@ -137,6 +137,7 @@
   height: 110px;
   width: 175px;
   margin-left: 35px;
+  padding-top: 3px;
 }
 
 .country-name {
@@ -327,6 +328,20 @@
 }
 
 .cancel-button:hover {
+  cursor: pointer;
+}
+
+.x-button {
+  font-size: 1.25rem;
+  background-color: #015c75;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  width: 60px;
+  height: 35px;
+}
+
+.x-button:hover {
   cursor: pointer;
 }
 

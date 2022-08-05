@@ -16,6 +16,8 @@ var $answerName = document.querySelector('.answer-name');
 var $studyNextButton = document.querySelector('.study-next-button');
 var $view = document.querySelectorAll('.view');
 var $modalView = document.querySelector('.modal-view');
+var $alertView = document.querySelector('.alert-view');
+var $xButton = document.querySelector('.x-button');
 var $cancelButton = document.querySelector('.cancel-button');
 var $deleteButton = document.querySelector('.delete-button');
 var index = 0;
@@ -54,6 +56,11 @@ function nextButtonEvent(event) {
   xhr.open('GET', 'https://restcountries.com/v3.1/all');
   xhr.responseType = 'json';
   xhr.addEventListener('load', function () {
+    if (xhr.status !== 200) {
+      $alertView.className = 'alert-view';
+    } else {
+      $alertView.className = 'alert-view hidden';
+    }
     var countries = xhr.response;
     var randomIndex = Math.floor(Math.random() * countries.length);
     var countryValues = {
@@ -71,6 +78,12 @@ function nextButtonEvent(event) {
   xhr.send();
 }
 $nextButton.addEventListener('click', nextButtonEvent);
+
+function xButtonEvent(event) {
+  $alertView.className = 'alert-view hidden';
+}
+
+$xButton.addEventListener('click', xButtonEvent);
 
 function viewSwap(event) {
   for (var i = 0; i < $view.length; i++) {
