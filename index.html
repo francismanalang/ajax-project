@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJAX Project</title>
   <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -69,12 +72,12 @@
     <div class="container list-container">
       <div class="row">
         <div class="col-full text-align-center">
-          <h1 class="list-text">Countries List</h1>
+          <h1 class="list-text">Flags List</h1>
         </div>
       </div>
       <div class="row">
         <div class="col-full text-align-center">
-          <p class="empty-list-text">Oh no! You have no countries to study</p>
+          <p class="empty-list-text">Oh no! You have no flags to study</p>
         </div>
       </div>
       <div class="row list">
@@ -127,6 +130,17 @@
           <div class="next-button-wrapper">
             <button class="study-next-button">NEXT</button>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-view hidden">
+    <div class="modal-display dark-background">
+      <div class="modal-container">
+        <p class="delete-text">Are you sure you want to delete this country?</p>
+        <div class="modal display-flex">
+          <button class="modal-button cancel-button">CANCEL</button>
+          <button class="modal-button delete-button">DELETE</button>
         </div>
       </div>
     </div>

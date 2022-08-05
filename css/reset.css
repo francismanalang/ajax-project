@@ -11,3 +11,12 @@ p {
   font-size: 20px;
   font-family: Roboto, sans-serif;
 }
+
+i {
+  padding-top: 55px;
+  padding-left: 15px;
+}
+
+i:hover {
+  cursor: pointer;
+}
