@@ -20,7 +20,7 @@
   background-color: #4fc3d0;
   border: none;
   font-family: "Chelsea Market", cursive;
-  font-size: 35px;
+  font-size: 2.2rem;
   color: white;
   padding-top: 15px;
   margin-left: 15px;
@@ -30,7 +30,7 @@
   background-color: #4fc3d0;
   border: none;
   font-family: Roboto, sans-serif;
-  font-size: 20px;
+  font-size: 1.3rem;
   color: white;
   padding-top: 20px;
   margin-right: 15px;
@@ -53,7 +53,7 @@
 
 .globe-header {
   text-align: center;
-  font-size: 25px;
+  font-size: 1.55rem;
   color: #4fc3d0;
 }
 
@@ -170,7 +170,7 @@
   border-radius: 0.4em;
   background-color: #015c75;
   color: white;
-  font-size: 50px;
+  font-size: 3.125rem;
 }
 
 .back-button {
@@ -181,7 +181,7 @@
   border-radius: 0.4em;
   background-color: #015c75;
   color: white;
-  font-size: 50px;
+  font-size: 3.125rem;
 }
 
 .back-button:hover {
@@ -196,7 +196,7 @@
   border-radius: 0.4em;
   background-color: #015c75;
   color: white;
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .answer-button:hover {
@@ -233,7 +233,7 @@
   border-radius: 0.4em;
   background-color: #4fc3d0;
   color: white;
-  font-size: 50px;
+  font-size: 3.125rem;
 }
 
 .study-next-button {
@@ -244,7 +244,7 @@
   border-radius: 0.4em;
   background-color: #4fc3d0;
   color: white;
-  font-size: 50px;
+  font-size: 3.125rem;
 }
 
 .study-next-button:hover {
@@ -273,7 +273,7 @@
   border-radius: 0.4em;
   background-color: #015c75;
   color: white;
-  font-size: 45px;
+  font-size: 2.8125rem;
   position: fixed;
   bottom: 1%;
   left: 17.5%;
@@ -286,13 +286,13 @@
 .list-text {
   color: #4fc3d0;
   font-family: Roboto, sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 .empty-list-text {
   color: #4fc3d0;
   font-family: Roboto, sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 0;
 }
 
@@ -317,7 +317,7 @@
 }
 
 .cancel-button {
-  font-size: 20px;
+  font-size: 1.25rem;
   background-color: #015c75;
   color: white;
   border: none;
@@ -331,7 +331,7 @@
 }
 
 .delete-button {
-  font-size: 20px;
+  font-size: 1.25rem;
   background-color: red;
   color: white;
   border: none;
@@ -360,7 +360,7 @@
 
 .delete-text {
   color: #015c75;
-  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
   margin: 0;
   padding-bottom: 10px;
