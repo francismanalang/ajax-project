@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AJAX Project</title>
-  <link rel="icon" href="images/favicon.ico">
+  <title>Flash Flags</title>
+  <link rel="icon" href="images/apple-touch-icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -28,7 +28,7 @@
     </div>
   </header>
   <div class="view" data-view="globe">
-    <div class="container globe-container">
+    <div class="container">
       <div class="row">
         <div class="col-full">
           <div class="globe-wrapper">
@@ -42,7 +42,7 @@
     </div>
   </div>
   <div class="view" data-view="country-generator">
-    <div class="container generator-container">
+    <div class="container">
       <div class="row">
         <div class="col-full padding-top">
           <div class="country-display background-color">
@@ -69,7 +69,7 @@
     </div>
   </div>
   <div class="view" data-view="countries-list">
-    <div class="container list-container">
+    <div class="container">
       <div class="row">
         <div class="col-full text-align-center">
           <h1 class="list-text">Flags List</h1>
@@ -88,7 +88,7 @@
     </div>
   </div>
   <div class="view" data-view="study-view">
-    <div class="container study-container">
+    <div class="container">
       <div class="row">
         <div class="col-full padding-top">
           <div class="study-display background-color">
@@ -108,7 +108,7 @@
     </div>
   </div>
   <div class="view" data-view="answer-view">
-    <div class="container answer-container">
+    <div class="container">
       <div class="row">
         <div class="col-full padding-top">
           <div class="answer-display background-color">
@@ -137,7 +137,7 @@
   <div class="modal-view hidden">
     <div class="modal-display dark-background">
       <div class="modal-container">
-        <p class="delete-text">Are you sure you want to delete this country?</p>
+        <p class="delete-text">Are you sure you want to delete this flag?</p>
         <div class="modal display-flex">
           <button class="modal-button cancel-button">CANCEL</button>
           <button class="modal-button delete-button">DELETE</button>
@@ -145,7 +145,7 @@
       </div>
     </div>
   </div>
-  <div class="alert-view">
+  <div class="alert-view hidden">
     <div class="modal-display dark-background">
       <div class="modal-container">
         <p class="delete-text">Sorry, there was an error connecting to the network! Please check your internet connection and try again.</p>

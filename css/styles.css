@@ -52,8 +52,9 @@
 }
 
 .globe-header {
+  font-family: Roboto, sans-serif;
   text-align: center;
-  font-size: 1.55rem;
+  font-size: 1.4rem;
   color: #4fc3d0;
 }
 
