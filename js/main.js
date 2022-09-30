@@ -222,7 +222,6 @@ $listDiv.addEventListener('click', iconEvent);
 
 function cancelButtonEvent(event) {
   $modalView.className = 'modal-view hidden';
-  data.delete = null;
 }
 
 $cancelButton.addEventListener('click', cancelButtonEvent);
@@ -238,7 +237,6 @@ function deleteButtonEvent(event) {
         cancelButtonEvent();
         viewSwap('countries-list');
         data.view = 'countries-list';
-        data.delete = null;
       }
     }
   }
