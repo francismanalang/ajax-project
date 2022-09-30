@@ -177,7 +177,6 @@
 }
 
 .back-button {
-  text-align: center;
   font-family: Roboto, sans-serif;
   width: 100%;
   height: 85px;
@@ -193,7 +192,6 @@
 }
 
 .answer-button {
-  text-align: center;
   font-family: Roboto, sans-serif;
   width: 100%;
   height: 80px;
@@ -231,7 +229,6 @@
 }
 
 .next-button {
-  text-align: center;
   font-family: Roboto, sans-serif;
   width: 100%;
   height: 85px;
@@ -243,7 +240,6 @@
 }
 
 .study-next-button {
-  text-align: center;
   font-family: Roboto, sans-serif;
   width: 100%;
   height: 85px;
