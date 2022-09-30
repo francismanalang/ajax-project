@@ -168,7 +168,9 @@
   font-family: Roboto, sans-serif;
   text-align: center;
   width: 100%;
-  min-height: 85px;
+  padding: 1rem;
+
+  /* min-height: 85px; */
   border: none;
   border-radius: 0.4em;
   background-color: #015c75;
@@ -178,8 +180,10 @@
 
 .back-button {
   font-family: Roboto, sans-serif;
+  padding: 1rem;
   width: 100%;
-  height: 85px;
+
+  /* height: 85px; */
   border: none;
   border-radius: 0.4em;
   background-color: #015c75;
@@ -230,8 +234,10 @@
 
 .next-button {
   font-family: Roboto, sans-serif;
+  padding: 1rem;
   width: 100%;
-  height: 85px;
+
+  /* height: 85px; */
   border: none;
   border-radius: 0.4em;
   background-color: #4fc3d0;
@@ -242,7 +248,9 @@
 .study-next-button {
   font-family: Roboto, sans-serif;
   width: 100%;
-  height: 85px;
+  padding: 1rem;
+
+  /* height: 85px; */
   border: none;
   border-radius: 0.4em;
   background-color: #4fc3d0;
