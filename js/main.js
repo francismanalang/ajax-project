@@ -20,6 +20,7 @@ var $alertView = document.querySelector('.alert-view');
 var $xButton = document.querySelector('.x-button');
 var $cancelButton = document.querySelector('.cancel-button');
 var $deleteButton = document.querySelector('.delete-button');
+var $loadingSpinner = document.querySelector('.lds-ring');
 var index = 0;
 
 function globeButtonEvent(event) {
@@ -55,6 +56,9 @@ function nextButtonEvent(event) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://restcountries.com/v3.1/all');
   xhr.responseType = 'json';
+  $loadingSpinner.className = 'lds-ring';
+  $countryFlag.className = 'country-flag hidden';
+  $countryName.textContent = 'Loading...';
   xhr.addEventListener('load', function () {
     if (xhr.status !== 200) {
       $alertView.className = 'alert-view';
@@ -67,9 +71,12 @@ function nextButtonEvent(event) {
       countryFlag: countries[randomIndex].flags.png,
       countryName: countries[randomIndex].name.common
     };
+
     $countryFlag.setAttribute('src', countryValues.countryFlag);
     $countryName.textContent = countryValues.countryName;
     data.allCountries.unshift(countryValues);
+    $countryFlag.className = 'country-flag';
+    $loadingSpinner.className = 'lds-ring hidden';
 
     if (data.allCountries.length > 5) {
       data.allCountries.splice(4);
