@@ -29,6 +29,24 @@
   padding: 3px 0;
 }
 
+.country-flag {
+  width: 100%;
+  max-height: 280px;
+  padding-bottom: 40px;
+  padding-top: 15px;
+}
+
+.lds-ring {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  min-height: 245px;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 2.45rem;
+}
+
 @media screen and (max-width: 768px) {
   .column-full {
     width: 100%;
@@ -42,5 +60,15 @@
 
   .list-flag {
     padding-left: 0.5rem;
+  }
+
+  .lds-ring {
+    min-height: 229px;
+    margin-bottom: 0;
+  }
+
+  .country-flag {
+    min-height: 225px;
+    max-height: 225px;
   }
 }
