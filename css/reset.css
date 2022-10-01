@@ -8,13 +8,13 @@ body {
 
 p {
   color: #4fc3d0;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: Roboto, sans-serif;
 }
 
 i {
-  padding-top: 55px;
-  padding-left: 15px;
+  padding-top: 3.438rem;
+  padding-left: 0.938rem;
 }
 
 i:hover {
