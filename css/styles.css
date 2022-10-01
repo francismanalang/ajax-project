@@ -172,7 +172,7 @@
 }
 
 .list-flag {
-  height: 110px;
+  max-height: 110px;
   width: 175px;
   margin-left: 2.188rem;
   padding-top: 0.188rem;
@@ -231,7 +231,7 @@
 .answer-button {
   font-family: Roboto, sans-serif;
   width: 100%;
-  height: 80px;
+  max-height: 80px;
   border: none;
   border-radius: 0.4em;
   background-color: #015c75;
@@ -256,7 +256,7 @@
 }
 
 .back-button-wrapper {
-  margin-left: 15px;
+  margin-left: 0.938rem;
   padding: 0.875rem 0;
   padding-right: 0.313rem;
 }
@@ -308,7 +308,7 @@
 .study-button {
   font-family: Roboto, sans-serif;
   width: 65%;
-  height: 65px;
+  max-height: 65px;
   border: none;
   border-radius: 0.4em;
   background-color: #015c75;
@@ -338,7 +338,7 @@
 
 .modal {
   max-width: 325px;
-  height: 50px;
+  max-height: 50px;
 }
 
 .modal-container {
