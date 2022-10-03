@@ -27,3 +27,12 @@ Try the application live here: [GitHub Pages Deployment](https://francismanalang
 * User can view saved flags
 * User can study saved flags
 * User can delete a flag
+
+## Preview
+
+### Generate Flags:
+![Kapture 2022-10-03 at 14 35 17](https://user-images.githubusercontent.com/101234537/193690488-0e298024-bbc3-44d8-8af2-45221384c456.gif)
+
+### Study Flags:
+![Kapture 2022-10-03 at 14 38 19](https://user-images.githubusercontent.com/101234537/193690660-d632493a-a746-4ebb-b6bb-e473387bee35.gif)
+
