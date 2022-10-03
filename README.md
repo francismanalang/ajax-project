@@ -22,11 +22,11 @@ Try the application live here: [GitHub Pages Deployment](https://francismanalang
 * Rest Countries API: [Docs](https://restcountries.com/)
 
 ## Features
-* User can view a random flag
-* User can save a flag
-* User can view saved flags
-* User can study saved flags
-* User can delete a flag
+* Users can view a random flag
+* Users can save a flag into a flags list
+* Users can view flags list
+* Users can study saved flags list
+* Users can delete a flag
 
 ## Preview
 
@@ -36,3 +36,7 @@ Try the application live here: [GitHub Pages Deployment](https://francismanalang
 ### Study Flags:
 ![Kapture 2022-10-03 at 14 38 19](https://user-images.githubusercontent.com/101234537/193690660-d632493a-a746-4ebb-b6bb-e473387bee35.gif)
 
+## Features in Development
+* Users can view all flags
+* Users can view info about a flag
+* Users can search for a flag
