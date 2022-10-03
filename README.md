@@ -35,7 +35,8 @@ Try the application live here: [GitHub Pages Deployment](https://francismanalang
 
 
 ### Study Flags:
-![Kapture 2022-10-03 at 14 38 19](https://user-images.githubusercontent.com/101234537/193690660-d632493a-a746-4ebb-b6bb-e473387bee35.gif)
+![Kapture 2022-10-03 at 14 55 50](https://user-images.githubusercontent.com/101234537/193693162-115141e1-e52d-4ab1-9afe-c612054e7efe.gif)
+
 
 ## Features in Development
 * Users can view all flags
