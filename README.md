@@ -17,6 +17,7 @@ Try the application live here: [GitHub Pages Deployment](https://francismanalang
 * JavaScript (Vanilla)
 * HTML5
 * CSS3
+* AJAX
 
 ### Data Sources
 * Rest Countries API: [Docs](https://restcountries.com/)
@@ -40,5 +41,5 @@ Try the application live here: [GitHub Pages Deployment](https://francismanalang
 
 ## Features in Development
 * Users can view all flags
-* Users can view info about a flag
+* Users can view infomation about a flag
 * Users can search for a flag
