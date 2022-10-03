@@ -17,7 +17,6 @@ Try the application live here: [GitHub Pages Deployment](https://francismanalang
 * JavaScript (Vanilla)
 * HTML5
 * CSS3
-* AJAX
 
 ### Data Sources
 * Rest Countries API: [Docs](https://restcountries.com/)
